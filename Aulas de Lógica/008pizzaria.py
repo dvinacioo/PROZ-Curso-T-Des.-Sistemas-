@@ -28,7 +28,7 @@ print(" P - PEQUENA")
 print(" M - MÉDIA")
 print(" G - GRANDE")
 print("_"*16)
-tampizza = input().upper
+tampizza = input().upper()
 
 print("FAÇA SEU PEDIDO PARA REFRIGERANTE: ")
 print(" 1 - COCA COLA")
@@ -88,6 +88,14 @@ elif(pedidopizza == 2) and (tampizza == "P") and (pedidorefri == 2):
     preco = 12.00 + 6.00
     pedidos = "FRANGO, PEQUENO, GUARANÁ"
 
+elif(pedidopizza == 2) and (tampizza == "M") and (pedidorefri == 2):
+    preco = 17.00 + 6.00
+    pedidos = "FRANGO, MÉDIA, GUARANÁ"
+
+elif(pedidopizza == 2) and (tampizza == "G") and (pedidorefri == 2):
+    preco = 23.00 + 6.00
+    pedidos = "FRANGO, GRANDE, GUARANÁ"
+
 elif(pedidopizza == 3) and (tampizza == "M") and (pedidorefri == 2):
     preco = 17.00 + 6.00
     pedidos = "CATUPIRY, MÉDIA, GUARANÁ"
@@ -96,17 +104,44 @@ elif(pedidopizza == 3) and (tampizza == "G") and (pedidorefri == 2):
     preco = 23.00 + 6.00
     pedidos = "CATUPIRY, GRANDE, GUARANÁ"
 
+elif(pedidopizza == 1) and (tampizza == "P") and (pedidorefri == 3):
+    preco = 12.00 + 5.00
+    pedidos = "CALABREZA, PEQUENA, FANTA"
 
+elif(pedidopizza == 1) and (tampizza == "M") and (pedidorefri == 3):
+    preco = 17.00 + 5.00
+    pedidos = "CALABREZA, MÉDIA, FANTA"
 
+elif(pedidopizza == 1) and (tampizza == "G") and (pedidorefri == 3):
+    preco = 23.00 + 5.00
+    pedidos = "CALABREZA, GRANDE, FANTA"
 
+elif(pedidopizza == 2) and (tampizza == "P") and (pedidorefri == 3):
+    preco = 12.00 + 5.00
+    pedidos = "FRANGO, PEQUENA, FANTA"
 
+elif(pedidopizza == 2) and (tampizza == "M") and (pedidorefri == 3):
+    preco = 17.00 + 5.00
+    pedidos = "FRANGO, MÉDIA, FANTA"
 
+elif(pedidopizza == 2) and (tampizza == "G") and (pedidorefri == 3):
+    preco = 23.00 + 5.00
+    pedidos = "FRANGO, GRANDE, FANTA"
 
+elif(pedidopizza == 3) and (tampizza == "P") and (pedidorefri == 3):
+    preco = 12.00 + 5.00
+    pedidos = "CATUPIRY, PEQUENA, FANTA"
 
+elif(pedidopizza == 3) and (tampizza == "M") and (pedidorefri == 3):
+    preco = 17.00 + 5.00
+    pedidos = "CATUPIRY, MÉDIA, FANTA"
 
+elif(pedidopizza == 3) and (tampizza == "G") and (pedidorefri == 3):
+    preco = 23.00 + 5.00
+    pedidos = "CATUPIRY, GRANDE, FANTA"
 
 print("_"*16)
-print(f"O TOTAL A PAGR PE: R$ {preco:.2f}")
+print(f"O TOTAL A PAGAR É: R$ {preco:.2f}")
 print(f"OS PEDIDOS FORAM: {pedidos}")
 print("_"*16)
 print("BOM APETITE E VOLTE SEMPRE!")
