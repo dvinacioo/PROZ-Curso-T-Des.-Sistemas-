@@ -96,6 +96,10 @@ elif(pedidopizza == 2) and (tampizza == "G") and (pedidorefri == 2):
     preco = 23.00 + 6.00
     pedidos = "FRANGO, GRANDE, GUARANÁ"
 
+elif(pedidopizza == 3) and (tampizza == "P") and (pedidorefri == 2):
+    preco = 12.00 + 6.00
+    predido = "CATUPIRY, PEQUENA, GUARANÁ"
+
 elif(pedidopizza == 3) and (tampizza == "M") and (pedidorefri == 2):
     preco = 17.00 + 6.00
     pedidos = "CATUPIRY, MÉDIA, GUARANÁ"
@@ -139,6 +143,10 @@ elif(pedidopizza == 3) and (tampizza == "M") and (pedidorefri == 3):
 elif(pedidopizza == 3) and (tampizza == "G") and (pedidorefri == 3):
     preco = 23.00 + 5.00
     pedidos = "CATUPIRY, GRANDE, FANTA"
+
+else:
+    print("Pedido Inválido!! Verifique se digitou correntamente as opções.")
+    exit()
 
 print("_"*16)
 print(f"O TOTAL A PAGAR É: R$ {preco:.2f}")
