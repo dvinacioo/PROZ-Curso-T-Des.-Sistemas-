@@ -1,7 +1,7 @@
 import re
 
 
-regex = r'^[w\.-]+@[w\.-]+\.w+$'
+regex = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
 
 email = input("Digite um e-mail para validação: ")
 
