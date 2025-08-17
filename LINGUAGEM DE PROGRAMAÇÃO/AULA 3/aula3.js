@@ -2,7 +2,6 @@ function verificaCupom(){
     const cab = document.getElementById("cabecalho")
     const men = document.getElementById("mensagem");
     const name = document.getElementById("cupom").value;
-    const bot = document.getElementById("verificar");
     const cupomCadastrado = "GANHA10";
     
     if(name == cupomCadastrado){
