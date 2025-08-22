@@ -3,7 +3,7 @@ Nesta atividade nós teríamos que pegar nosso código feito no trabalho passado
 O que foi feito é que agora possuo uma variavel para pegar o valor do Input ao invés de pega-lo diretamento do "ById". E também foi removido a função 'Break' que era desnecessária no código.
 Código js Original:
 
-"
+```
 function verifica(){
     let nomes = ["Davi", "Lucas", "Luzia"];
     let senhas =["123", "1234", "12345"];
@@ -28,4 +28,5 @@ function verifica(){
         mensagem.style.color = "red"
     }
 }
-"
+```
+
