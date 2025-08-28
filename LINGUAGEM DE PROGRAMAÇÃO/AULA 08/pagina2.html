@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Títulos do Cruzeiro</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <header>
+        <h1>Títulos do Cabuloso - Copa do Brasil</h1>
+    </header>
+    <h2>Clique em algum título para saber o resumo</h2>
+    <ul>
+        <li onclick="informacaoTitulo('1993')">Copa de 1993</li>
+        <li onclick="informacaoTitulo('1996')">Copa de 1996</li>
+        <li onclick="informacaoTitulo('2000')">Copa de 2000</li>
+        <li onclick="informacaoTitulo('2003')">Copa de 2003</li>
+        <li onclick="informacaoTitulo('2017')">Copa de 2017</li>
+        <li onclick="informacaoTitulo('2018')">Copa de 2018</li>
+        <li onclick="informacaoTitulo('2025')">Copa de 2025</li>
+    </ul>
+
+    <div id="detalhes"></div>
+
+    <footer>
+        &copy; 2025 dvincacioo - Todos os direitos reservados.
+        <p>Telefone:(31)99123-4567</p>
+        <a href="https://www.instagram.com/cruzeiro/" target="_blank">Instagram do Cruzeiro</a>
+    </footer>
+
+    <script>
+        async function informacaoTitulo(ano) {
+            try{
+                document.getElementById("detalhes").innerHTML = "Carregando informações..."
+
+                await new Promise(resolve => setTimeout(resolve, 2000));
+
+                let mensagens = {
+                    "1993": "Cruzeiro venceu o São Paulo por 4 a 2 no agregado (3 a 0 no Mineirão e 2 a 1 no Morumbi), conquistando seu primeiro título da Copa do Brasil.",
+                    "1996": "O Cruzeiro derrotou o Vasco da Gama nos pênaltis, após empate de 0 a 0 no tempo normal e 1 a 1 na prorrogação, com destaque para o goleiro Dida nas penalidades.",
+                    "2000": "Cruzeiro venceu o São Paulo por 2 a 1 no agregado (1 a 0 no Mineirão e 1 a 1 no Morumbi), conquistando seu terceiro título da Copa do Brasil com grande desempenho de jogadores como Alex e Deivid.",
+                    "2003": "O Cruzeiro derrotou o Fluminense por 2 a 1 no agregado (1 a 0 no Mineirão e 1 a 1 no Maracanã), garantindo o quarto título, com destaque para a liderança de Paulo Autuori e grandes atuações de Alex e Deivid.",
+                    "2017": "Cruzeiro venceu o Flamengo por 5 a 3 no agregado (1 a 1 no Maracanã e 2 a 1 no Mineirão), com destaque para a ótima campanha de Mano Menezes e atuações de Thiago Neves e Fábio.",
+                    "2018": "O Cruzeiro conquistou o sexto título ao derrotar o Corinthians por 2 a 1 no agregado (1 a 0 no Mineirão e 2 a 1 na Arena Corinthians), novamente sob o comando de Mano Menezes, com destaque para a eficiência defensiva e gols de jogadores como Thiago Neves.",
+                    "2025": "Carregando..."
+                };
+                document.getElementById("detalhes").innerHTML = mensagens[ano];
+            }
+            catch(erro){
+                document.getElementById("detalhes").innerHTML = "Erro:" + erro.message;
+            }
+        }
+    </script>
+</body>
+</html>

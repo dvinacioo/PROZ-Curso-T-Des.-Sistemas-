@@ -1,0 +1,117 @@
+/* Resetando margens e padding para um estilo limpo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo a fonte padrão para uma mais esportiva e clara */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9; /* Fundo claro para contrastar com o azul */
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Estilizando o header */
+header {
+    background-color: #003A70; /* Azul Celeste do Cruzeiro */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Estilizando o subtítulo */
+h2 {
+    font-size: 1.4em;
+    margin-top: 20px;
+    text-align: center;
+    color: #003A70;
+}
+
+/* Estilizando a lista de títulos */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 30px;
+    text-align: center;
+}
+
+li {
+    font-size: 1.2em;
+    margin: 10px;
+    padding: 12px;
+    background-color: #0069d9; /* Azul mais forte para contraste */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    font-weight: bold;
+}
+
+li:hover {
+    background-color: #0056b3; /* Azul mais escuro no hover */
+    transform: scale(1.05);
+}
+
+/* Estilizando a área de detalhes */
+#detalhes {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.1em;
+    color: #555;
+    text-align: center;
+    border: 2px solid #003A70; /* Borda azul para destacar */
+}
+
+/* Estilizando o footer */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    color: #777;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #0069d9; /* Azul de destaque */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin-top: 10px;
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    li {
+        font-size: 1em;
+    }
+
+    #detalhes {
+        font-size: 1em;
+    }
+}
