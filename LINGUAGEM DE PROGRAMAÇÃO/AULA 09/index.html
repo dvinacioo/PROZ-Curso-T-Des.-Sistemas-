@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viajar Mais</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Viajar Mais</h1>
+    </header>
+    <div class="container">
+        <h1>Escolha um destino:</h1>
+        <ul>
+            <li onclick="informacaoDestino('Salvador')">Salvador - BA</li>
+            <li onclick="informacaoDestino('Natal')">Natal - RN</li>
+            <li onclick="informacaoDestino('Santiago')">Santiago - Chile</li>
+            <li onclick="informacaoDestino('BuenosA')">Buenos Aires - Argentina</li>
+        </ul>
+    </div>
+    <div id="detalhes"></div>
+    <footer>@2025 Viajar Mais.</footer>
+
+    <script>
+        async function informacaoDestino(local) {
+            document.getElementById("detalhes").scrollIntoView({ behavior: 'smooth' });
+
+            try{
+                document.getElementById("detalhes").innerHTML = "Carregando destino...";
+
+                await new Promise(resolve => setTimeout(resolve, 2500));
+
+                let mensagens = {
+                    "Salvador": "Descubra Salvador, a capital da Bahia que respira algria e cultura. Com o charme histórico do Pelourinho, praias deslumbrnates e festas únicas, a cidade oferece experiências inesquecíveis. Se você busca história, múscia, gastronomia e paisagens de tirar o fôlego, Salvador é o destino ideal para sua próxima viagem.",
+
+                    "Natal": "Natal, a Cidade do Sol, encanta com praias paradisícas, dunas e passeios de buggy inesquecíveis. Entre natureza, história e gastronomio, é o destine perfeito para quem busca sol e aventura o ano inteiro.",
+
+                    "Santiago": "Santiago, a capital do CHile, une modernidade e charme andino. Cercada pela Cordilheira dos Andes, oferece vinícolas renomadas, boa gastronomia e fácil acesso a estações de esqui cultura e vales vinícolas. Um destino que combina cultura, natureza e experiências únicas o ano inteiro.",
+
+                    "BuenosA": "Buenos Aires, capital da Argentina, é uma cidade apaixonante que mistura elegância europeia e alma latina. Famosa pelo tango, pela gastronomia e pela vida noturna, oferece atrações como Casa Rosada, Caminito e a Recoleta. Um destino vibrante para quem busca cultura, história e diversão."
+                };
+                document.getElementById("detalhes").innerHTML = mensagens[local];
+            }
+            catch(erro){
+                document.getElementById("detalhes").innerHTML = "Erro" + erro.message;
+            }
+        }
+    </script>
+</body>
+</html>
