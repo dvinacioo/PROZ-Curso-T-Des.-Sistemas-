@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Quiz Interativo</title>
+<style>
+body { 
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 40px; 
+    background-color: #f8fafc;
+ }
+ header {
+    text-align: center;
+    background-color:#f1f5f9;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+    color: black;
+    padding: 20px;
+    font-size: 25px;
+    border-radius: 10px;
+    width: 70%;
+    margin: 0 auto;
+ }
+ ul {
+    list-style: none;   
+    padding: 0;
+}
+ li { 
+    background: #e2e8f0; 
+    width: 250px; 
+    margin: 10px auto; 
+    border-radius: 8px; 
+    padding: 15px; 
+    transition: 0.3s;
+    cursor: pointer;
+    font-weight: bold;
+ }
+ li:hover {
+    background: #cbd5e1; 
+}
+ #pergunta {
+    margin-top: 30px;
+    font-size: 18px;
+    color: darkblue; min-height: 50px;
+    text-align: left;
+}
+ footer{
+    background-color:#f1f5f9;
+    text-align: center;
+    padding: 10px;
+    color:black;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 100px;
+ }
+ </style>
+</head>
+<body>
+    <header>
+     Quiz Interativo
+    </header>
+    <h2>Escolha um tema para responder:</h2>
+    <ul>
+        <li onclick="mensagem('Matemática')">Matemática</li>
+        <li onclick="mensagem('História')">História</li>
+        <li onclick="mensagem('Tecnologia')">Tecnologia</li>
+        <li onclick="mensagem('Curiosidades')">Curiosidades</li>
+    </ul>
+ <div id="pergunta"></div>
+ <footer>
+     &copy; 2025 Quiz Interativo.
+ </footer>
+ <script>
+    async function mensagem(materias) {
+        document.getElementById("pergunta").scrollIntoView({behavior: "smooth"});
+
+        try{
+            document.getElementById("pergunta").innerHTML = "Carregando questão..."
+            await new Promise(faz => setTimeout(faz, 2000));
+            let questao = {
+                "Matemática": "Em uma agência de viagens, o valor de um pacote turístico para Salvador é composto por uma taxa fixa de R$ 800,00 mais R$ 250,00 por dia de hospedagem.<br> Se um cliente quer contratar o pacote para ficar 7 dias, qual será o valor total pago?<br> A) R$ 1.550,00<br> B) R$ 2.550,00<br> C) R$ 1.750,00<br> D) R$ 2.250,00<br> E) R$ 3.550,00",
+
+                "História": "Durante o período colonial no Brasil, a principal atividade econômica desenvolvida pelos portugueses foi a produção de açúcar. Sobre essa atividade, é correto afirmar que:<br> A) Era baseada principalmente no trabalho livre e assalariado dos colonos.<br> B) As plantações de açúcar se concentravam no interior do país, longe do litoral.<br> C) O sistema de plantation envolvia grandes propriedades, monocultura e uso de mão de obra escravizada.<br> D) A produção era destinada quase exclusivamente ao consumo interno da população colonial.<br> E) Os engenhos eram pequenas propriedades familiares que produziam açúcar artesanalmente.",
+
+                "Tecnologia": "A inclusão digital é um dos grandes desafios do mundo contemporâneo. Ela se refere:<br> A) Ao uso de tecnologias apenas em ambientes empresariais e governamentais.<br> B) À criação de redes sociais com acesso restrito a especialistas em informática.<br> C) Ao acesso limitado à internet em áreas rurais para preservar a cultura local.<br> D) À ampliação do acesso às tecnologias da informação e comunicação para todos, promovendo igualdade de oportunidades.<br> E) Ao aumento da produção de dispositivos eletrônicos sem preocupação com o meio ambiente.",
+
+                "Curiosidades": "Qual destes objetos modernos foi inspirado diretamente na estrutura de uma teia de aranha?<br> A) O Wi-Fi <br>B) O GPS<br> C) O colete à prova de balas<br> D) O micro-ondas<br> E) A câmera digital"
+            };
+                document.getElementById("pergunta").innerHTML = questao[materias];
+            }
+            catch(erro){
+                document.getElementById("pergunta").innerHTML = "Erro" + erro.mensage;
+                console.error("Erro capturado:", erro);
+            }
+        }
+ </script>
+</body>
