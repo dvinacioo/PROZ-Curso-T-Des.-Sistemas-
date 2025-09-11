@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            transition: background-color 1.5s;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(7, 7, 7);
+            text-align: center;
+            padding-top: 70px;
+        }
+        button{
+            padding: 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        @media(max-width: 758px){
+            body{ font-size: 28px; padding-top: 50px;}
+            button{ font-size: 16px; padding: 18px;}
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titulo">Bem-vindo(a)!</h1>
+    <p>Clique no botão abaixo para mudar a cor da página de acordo com o horário do dia.</p>
+    <button onclick="trocar()">Mudar cor</button>
+    <script>
+        function trocar(){
+            const hora = new Date().getHours();
+            let cor;
+            let mensagem;
+
+            if(hora >= 6 && hora < 12){
+                mensagem = "Bom dia! ☀️";
+                cor = "#FFD700";
+            }
+
+            else if(hora >= 12 && hora < 18){
+                mensagem = "Boa tarde! ⛅";
+                cor = "#FF8C00";
+            }
+
+            else if(hora >= 18 && hora < 23){
+                mensagem = "Boa noite! 🌕";
+                cor = "#1FE90FF"
+            }
+
+            else{
+                mensagem = "Já era para você estar dormindo!! 🌙 ";
+                cor = "#2F4F4F";
+            }
+
+            document.body.style.backgroundColor = cor;
+            document.getElementById("titulo").innerHTML =  mensagem;
+        }
+
+        
+    </script>
+</body>
+</html>
