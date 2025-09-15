@@ -9,6 +9,7 @@
             transition: background-color 1.5s;
             font-family: Arial, Helvetica, sans-serif;
             color: rgb(7, 7, 7);
+            font-size: 20px;
             text-align: center;
             padding-top: 70px;
         }
@@ -28,11 +29,18 @@
 </head>
 <body>
     <h1 id="titulo">Bem-vindo(a)!</h1>
-    <p>Clique no botão abaixo para mudar a cor da página de acordo com o horário do dia.</p>
+    <p id="frase">Clique no botão abaixo para mudar a cor da página de acordo com o horário do dia.</p>
+    <p id="hora"></p>
+    <p id="data"></p>
     <button onclick="trocar()">Mudar cor</button>
     <script>
         function trocar(){
-            const hora = new Date().getHours();
+            const agora = new Date();
+            const hora = agora.getHours();
+            const minutos = agora.getMinutes().toString().padStart(2, "0");
+            const opcoes = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
+            const dataFormatada = agora.toLocaleDateString("pt-BR", opcoes)
+            
             let cor;
             let mensagem;
 
@@ -58,6 +66,9 @@
 
             document.body.style.backgroundColor = cor;
             document.getElementById("titulo").innerHTML =  mensagem;
+            document.getElementById("frase").innerHTML = "";
+            document.getElementById("hora").innerHTML = "🕒agora são "+hora+":"+minutos+ " de";
+            document.getElementById("data").innerHTML = "🗓️"+dataFormatada;
         }
 
         
