@@ -6,6 +6,10 @@
     <title>Document</title>
     <style>
         body{
+            height: 100vh; /* Ocupa 100% da tela */
+            display: flex; /* Ativa o flexob */
+            justify-content: center; /*  Centraliza horizontalmente */
+            align-items: center; /* Centraliza vertucalmente */
             transition: background-color 2.5s;
             font-family: Arial, Helvetica, sans-serif;
             color: rgb(7, 7, 7);
@@ -15,6 +19,7 @@
             background-size: cover; /* Faz a imagem cobrir toda a tela */
             background-position: center; /* Centraliza a imagem */
             background-attachment: fixed; /* Faz a imagem ficar fixa enquanto rola a página */
+            background-repeat: no-repeat; /* impede a repetição*/        
         }
         .container{
             background: rgba(255, 255, 255, 0.5);
@@ -34,6 +39,7 @@
         @media(max-width: 758px){
             body{ font-size: 28px; padding-top: 50px;}
             button{ font-size: 16px; padding: 18px;}
+            .container{width: 80%;}
         }
     </style>
 </head>
@@ -43,9 +49,10 @@
         <h1 id="titulo">Bem-vindo(a)!</h1>
         <p id="frase">Clique no botão abaixo para mudar a cor da página de acordo com o horário do dia.</p>
         <p id="hora"></p>
+        <p id="day"></p>
         <p id="data"></p>
         <button onclick="trocar()" id="botao">Mudar cor</button>
-        <p id="frase"></p>
+        
     </div>
     <script>
         function trocar(){
@@ -54,11 +61,18 @@
             const minutos = agora.getMinutes().toString().padStart(2, "0");
             let segundos = agora.getSeconds().toString().padStart(2, "0");
             const opcoes = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
+            const day = agora.getDay();
             const dataFormatada = agora.toLocaleDateString("pt-BR", opcoes);
-
+            document.getElementById("botao").style.display = "none";
+            
             let imagem;
             let mensagem;
-
+            if(day > 0 && day <= 5){
+                document.getElementById("day").innerHTML = "Hoje é um dia útil!";
+            }
+            else{
+                document.getElementById("day").innerHTML = "Estamos em um Belo Final de Semana!"
+            }
             if(hora >= 6 && hora < 12){
                 mensagem = "Bom dia! ☀️";
                 frases = ["Bom dia! Que seu dia seja cheio de luz e alegria.", "Acorda! O mundo te espera com novas oportunidades. Bom dia!", "Hoje é um novo dia para conquistar seus sonhos. Bom dia!"];
@@ -84,9 +98,8 @@
             }
 
             document.body.style.backgroundImage = imagem;
-            document.getElementById("botao").style.display = "none";
+            
             document.getElementById("titulo").innerHTML =  mensagem;
-            document.getElementById("frase").innerHTML = "";
             document.getElementById("hora").innerHTML = "🕒agora são "+hora+":"+minutos+ ":"+ segundos;
             document.getElementById("data").innerHTML = "🗓️"+dataFormatada;
         }
@@ -97,11 +110,13 @@
                 document.getElementById("frase").innerHTML = fraseAleatoria;
             }
         }
+        
         trocar();
         setInterval(trocar, 1000);
 
         trocarFrase();
         setInterval(trocarFrase, 5000);
+       
     </script>
 </body>
 </html>
