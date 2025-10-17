@@ -9,3 +9,4 @@ O curso tem como objetivo formar profissionais capazes de desenvolver, testar e 
 ## 🧠 Conteúdo estudado
 - 🐍Lógica de Programação com Python
 - Linguagem de Programação (Foco em JS)
+- Programação Back-End (Foco em PHP)
