@@ -1,0 +1,67 @@
+ body {
+     font-family: Arial, sans-serif;
+     background-color: rgb(16, 16, 214);
+     flex-direction: column; 
+     align-items: center; 
+     justify-content: center; 
+     height: 100vh; 
+     margin: 0;
+     display: flex;
+}
+
+h1{
+    color: white;
+}
+
+.form {
+    background: white;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+        
+}
+input, select, textarea{
+    box-sizing: border-box;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+#botao{
+    padding: 5px;
+    color: white;
+    background-color: rgb(16, 16, 214);
+    cursor: pointer;
+}
+
+#descri{
+    height: 100px;
+   
+}
+/* Estilo dos dados exibidos pelo PHP */
+.resultado {
+    align-items: center; 
+    justify-content: center; 
+    padding: 10px;
+    border-radius: 6px;
+    background-color: white;
+}
+
+.resultado strong {
+    color: #5563DE;
+}
+
+a{
+
+    text-decoration: none;
+    background-color: #5563DE;
+    color: white;
+    padding: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+#h{
+    color: black;
+}
