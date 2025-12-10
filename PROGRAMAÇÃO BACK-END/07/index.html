@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+
+        <h1>Digite a quantidade de carros na via</h1>
+        <input type="number" id="carrosVia">
+        <button onclick="semafaro()">Enviar</button>
+        <p id="respostaSis">Sinal fechado (Aguaradando contagem)</p>
+
+    </div>
+
+    <script>
+        document.getElementById("respostaSis").style.color = "red";
+
+        function semafaro(){
+
+        const carros = document.getElementById("carrosVia").value;
+
+            if(carros < 11){
+               
+                document.getElementById("respostaSis").innerHTML = "Tempo do semáfaro verde de 10s. (fluxo baixo)";
+                document.getElementById("respostaSis").style.color = "green";
+                setTimeout(() =>{
+                    document.getElementById("respostaSis").innerHTML = "Sinal fechado (Aguaradando contagem)";
+
+                    document.getElementById("respostaSis").style.color = "green";
+
+                    document.getElementById("respostaSis").style.color = "red";
+                }, 10000);
+          
+            }
+            else if (carros >= 11 && carros < 20) {
+                
+                document.getElementById("respostaSis").innerHTML = "Tempo do semáfaro verde de 15s. (fluxo moderado)";
+                document.getElementById("respostaSis").style.color = "green";
+
+                setTimeout(() =>{
+                    document.getElementById("respostaSis").innerHTML = "Sinal fechado (Aguaradando contagem)";
+
+                    document.getElementById("respostaSis").style.color = "red";
+                }, 15000);
+               
+            } else {
+                
+                document.getElementById("respostaSis").innerHTML = "Tempo do semáfaro verde de 20s. (fluxo intenso)";
+                document.getElementById("respostaSis").style.color = "green";
+               setTimeout(() =>{
+                    document.getElementById("respostaSis").innerHTML = "Sinal fechado (Aguaradando contagem)";
+
+                    document.getElementById("respostaSis").style.color = "red";
+                }, 20000);
+            }
+        }
+
+    </script>
+</body>
+</html>
