@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapCar - Site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>SnapCar Experience – Plataforma de Compra Inteligente de Carros</h1>
+        <h3>Seu próximo carro, no seu ritmo.</h3>
+        <nav>
+            <a href="#principal">Principal</a>
+            <a href="#conteudo">Conteudos</a>
+            <a href="#serviços">Serviços</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+
+        <main>
+            <section id="principal">
+                <h2>Catálogo de Carros</h2>
+                <div class="carrossel">
+                    <img src="imagens/onix-s.jpg" class="ativa">
+                    <img src="imagens/onix-h.webp">
+                    <img src="imagens/bmw-x7.jpg">
+                    <img src="imagens/civic.webp">
+                </div>
+
+                <div class="botoes">
+                    <button onclick="anterior()">Anterior</button>
+                    <button onclick="proximo()">Próximo</button>
+                </div>
+            </section>
+
+            <section id="conteudo">
+                <article>
+                    <p>Conheça nossos carros disponíveis:</p>
+                    <ul>
+                        <li>Onix Sedã</li>
+                        <li>Onix Hatch</li>
+                        <li>BMW X7 SUV</li>
+                        <li>Civic Sedã</li>
+                    </ul> <br>
+                    
+                </article>
+            
+                <article>
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>Nome:</th>
+                                <th>Modelo:</th>
+                                <th>Preço:</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Onix</td>
+                                <td>Sedã</td>
+                                <td>R$ 75.000,00</td>
+                            </tr>
+                            <tr>
+                                <td>Onix</td>
+                                <td>Hatch</td>
+                                <td>R$ 68.000,00</td>
+                            </tr>
+                            <tr>
+                                <td>BMW X7</td>
+                                <td>SUV</td>
+                                <td>R$ 110.000,00</td>
+                            </tr>
+                            <tr>
+                                <td>Civic</td>
+                                <td>Sedã</td>
+                                <td>R$ 88.000,00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article> <br>
+
+            </section>
+
+            <section id="serviços">
+                <h2>Serviços</h2>
+                <p>Fazemos venda de carros semi-novos e novos.</p>
+                <h2>Formas de Pagamento</h2>
+                <p>Parcelamos em até 48 vezes, compramos o seu carro ou trocamos</p>
+            </section>
+        </main>
+    <footer>
+        <p>&copy; Todos os direitos reseravados à ID</p>
+    </footer>
+    <script src="teste.js"></script>
+</body>
+</html>
