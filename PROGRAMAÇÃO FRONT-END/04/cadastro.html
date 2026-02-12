@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <style>
+        /* Reset padrão */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        /* Corpo da página */
+        body {
+            background-color: aliceblue;
+            font-family: Arial, Helvetica, sans-serif;
+            /* Centralização vertical e horizontal */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* Garante centralização real */
+        }
+
+        /* Container principal */
+        .container {
+            margin-top: 100px;
+            margin-bottom: 100px;
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+            width: 500px;
+            /* Define largura fixa */
+
+        }
+
+        /* Título */
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Organização do formulário */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Campos */
+        input,
+        select,
+        a {
+            font-size: 16px;
+            padding: 8px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+
+        /* Botão */
+        input[type="submit"] {
+            background-color: rgb(0, 183, 255);
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        /* Efeito hover */
+        input[type="submit"]:hover {
+            background-color: rgb(4, 121, 14);
+        }
+
+        /* Container dos radios */
+        .genero {
+            display: flex;
+            /* Coloca lado a lado */
+            gap: 60px;
+            /* Espaço entre eles */
+            margin-bottom: 15px;
+            /* Espaço abaixo */
+        }
+
+        /* Ajusta alinhamento do texto com o botão */
+        .genero label {
+            align-items: center;
+            gap: 5px;
+        }
+
+        .btn-voltar {
+            display: block;
+            text-align: center;
+            margin-top: 5px;
+            padding: 4px;
+            background-color: rgb(0, 183, 255);
+            text-decoration: none;
+            color: black;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-voltar:hover {
+            background-color: rgba(172, 5, 5, 0.877);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form id="formulario" onsubmit="alert('Dados salvos com sucesso!')">
+
+            <h1>Cadastro</h1>
+            Nome: 
+            <input type="text" name="nome" id="txtNome" required> 
+
+            Data de Nascimento: 
+            <input type="date" name="Nascimento" id="txtNascimento" min="1950-01-01" max="2026-02-12" required> 
+
+            E-mail: 
+            <input type="email" name="email" id="txtEmail" required> 
+
+            Senha: 
+            <input type="password" name="senha" id="txtSenha" required> 
+
+            Genero: 
+            <div class="genero">
+                <label>
+                    <input type="radio" name="genero" value="M" required>
+                    Masculino
+                </label>
+
+                <label>
+                    <input type="radio" name="genero" value="F">
+                    Feminino
+                </label>
+            </div>
+
+
+            Curso: 
+            <select name="selectCurso" id="txtCurso" required>
+                <option value="" selected disabled>Selecione</option>
+                <option value="Vendedor">Vendedor</option> 
+                <option value="Cliente">Cliente</option> 
+                <option value="Parceiro">Parceiro</option>
+            </select> 
+            <input type="submit" value="Enviar">
+            <a href="index.html" class="btn-voltar">Voltar</a>
+
+        </form>
+    </div>
+    <script>
+
+    </script>
+</body>
+
+</html>
