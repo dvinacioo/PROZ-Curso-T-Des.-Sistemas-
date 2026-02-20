@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mansão Maromba</title>
+</head>
+
+<body>
+    <header>
+        <h1>Mansão Maromba</h1>
+        <p>Salvando sua vida</p>
+        <nav>
+            <a href="#principal">Principal</a>
+            <a href="#produtos">Produtos</a>
+            <a href="pagamento">Pagamento</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="principal">
+            <h2>Suplementos:</h2>
+            
+            <div class="carrossel">
+                <img src="imagens/whey_protein.webp" alt="Whey Protein" class="ativa">
+                <img src="imagens/creatina.webp" alt="Creatina">
+                <img src="imagens/creatina_em_capsulas.webp" alt="Craetina em capsula">
+                <img src="imagens/suplementos_naturais.avif" alt="Suplementos naturais">
+            </div>
+            <div class="botoes">
+                <button onclick="anterior()">Anterior</button>
+                <button onclick="proximo()">Próximo</button>
+            </div>
+        </section>
+
+        <section id="produtos">
+            <article>
+                <h2>Conheça nossos produtos:</h2>
+                <ul>
+                    <li>Whey Protein</li>
+                    <li>Creatina</li>
+                    <li>Creatina em capsula</li>
+                    <li>Suplementos naturais</li>
+                </ul>
+            </article>  
+
+            <article>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Produto:</th>
+                            <th>Preço:</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Whey Protein</td>
+                            <td>R$ 134,90</td>
+                        </tr>
+                        <tr>
+                            <td>Creatina</td>
+                            <td>R$ 62,90</td>
+                        </tr>
+                        <tr>
+                            <td>Creatina em Capsula</td>
+                            <td>R$ 45,00</td>
+                        </tr>
+                        <tr>
+                            <td>Suplementos Naturais</td>
+                            <td>R$ 169,87</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </article>
+        </section>
+
+        <section id="pagamento">
+            <p>Aceitamos pagamentos por PIX, Cartão de Crédito e Débito.</p>
+            <p>Parcelamos em até 5 vezes sem juros.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; Todos os direitos reseravados à Mansão Maromba</p>
+        <div id="contato">
+            <a href="https://www.instagram.com/toguro/" target="_blank">Instagram</a></div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
