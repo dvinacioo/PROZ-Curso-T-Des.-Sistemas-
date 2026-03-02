@@ -1,0 +1,61 @@
+body{
+    background-image: url(img/titulos-cabuloso.webp);
+    height: 100vh;
+    margin: 0;
+    background-size: cover;       /* Mostra a imagem inteira */
+    background-repeat: no-repeat;   /* Não repete */
+    background-position: center;    /* Centraliza */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth
+}
+.container{
+    background-color: rgba(4, 62, 163, 0.719);
+    text-align: center;
+    width: 400px;
+    height: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    /*Animação de entrada hotizontal*/
+    transform: translateX(-500px);
+    animation: slideIn 3s forwards;
+    box-shadow: 2px 2px 5px black;
+}
+
+/*Animação*/
+@keyframes slideIn {
+    to { transform: translateX(0);}
+}
+
+h1{
+    color: white;
+}
+
+input{
+    padding: 8px;
+    margin-bottom: 8px;
+    width: 300px;
+    border-radius: 8px;
+    border: none;
+}
+
+button{
+    padding: 8px;
+    background-color: white;
+    width: 312px;
+    color: white;
+    border: 0;
+    background-color: rgb(0, 37, 97);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(89, 119, 168);
+    transform: scale(1.02);
+    transition: 0.3s;
+    text-shadow: 2px 2px 2px black;
+    font-size: 17px;
+}
