@@ -12,7 +12,7 @@
     </header>
     <section>
         <h2>Dados do Login:</h2> <br>
-        <p>User:</p>
+        <p>User:</p> <p id="divUser"></p>
     </section>
     <section>
         <h2>Conheça os títulos</h2>
@@ -22,4 +22,9 @@
 
     <a href="index.html">Voltar</a>
 </body>
+
+<script>
+    let usuario = localStorage.getItem("usuarioLogado");
+    document.getElementById("divUser").innerHTML = usuario;
+</script>
 </html>
