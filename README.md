@@ -7,6 +7,8 @@ Este repositório contém os projetos, exercícios e anotações realizados dura
 O curso tem como objetivo formar profissionais capazes de desenvolver, testar e manter sistemas computacionais, utilizando linguagens de programação, bancos de dados e boas práticas da área de TI.
 
 ## 🧠 Conteúdo estudado
-- 🐍Lógica de Programação com Python
+- Lógica de Programação com Python 🐍
 - Linguagem de Programação (Foco em JS)
 - Programação Back-End (Foco em PHP)
+- Bootstrap 5
+
