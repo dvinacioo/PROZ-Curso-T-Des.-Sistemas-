@@ -5,7 +5,7 @@ CREATE TABLE clientes(
   nome TEXT,
   idade INTEGER,
   cidade TEXT,
-  plano INTEGER
+  plano TEXT
   );
   
  INSERT INTO clientes(nome, idade, cidade, plano)
