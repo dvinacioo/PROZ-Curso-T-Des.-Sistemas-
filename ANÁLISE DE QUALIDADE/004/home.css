@@ -1,0 +1,634 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #000;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      min-height: 100vh;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    .app {
+      width: 100%;
+      max-width: 760px;
+      min-height: 100vh;
+      background: #000;
+      padding-bottom: 100px;
+      overflow: hidden;
+    }
+
+    /* ================= HEADER ================= */
+
+    header {
+      padding: 28px 36px 10px;
+    }
+
+    /* ================= LOGO ================= */
+
+    .logo-area {
+      text-align: center;
+      margin-top: -10px;
+    }
+
+    .eclipse {
+      width: 105px;
+      height: 105px;
+      margin: auto; /* Deixa a "imagem" centralizada*/
+      border-radius: 50%; /* Deixa a div redonda*/
+      background: #000;
+      border: 1px solid #333;
+      box-shadow:
+        8px -4px 0 #fff,
+        11px -7px 18px rgba(255,255,255,.9),
+        0 0 35px rgba(255,255,255,.15); /* Sombra com efeito da lua*/
+      position: relative;
+    }
+
+    .logo-title {
+      font-size: 27px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-top: 30px;
+    }
+
+    .logo-subtitle {
+      font-size: 14px;
+      letter-spacing: 2px;
+      color: #bbb;
+      margin-top: 4px;
+    }
+
+    /* ================= GREETING ================= */
+
+    .greeting {
+      padding: 30px 36px 15px;
+    }
+
+    .greeting h1 {
+      font-size: 30px;
+      margin-bottom: 5px;
+    }
+
+    .greeting p {
+      color: #bbb;
+      font-size: 17px;
+    }
+
+    .location {
+      background: #1d1d1f;
+      border-radius: 35px;
+      padding: 13px 17px;
+      min-width: 245px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .pin {
+      font-size: 24px;
+    }
+
+    .arrow-down {
+      margin-left: auto;
+      color: #aaa;
+    }
+
+    /* ================= SEARCH ================= */
+
+    .search-area {
+      display: flex;
+      gap: 18px;
+      padding: 10px 36px 28px;
+    }
+
+    .search {
+      flex: 1;
+      height: 70px;
+      border: 1px solid #39393d;
+      border-radius: 38px;
+      background: #101011;
+      display: flex;
+      align-items: center;
+      padding: 0 27px;
+    }
+
+    .search-icon {
+      font-size: 33px;
+      color: #bbb;
+      margin-right: 18px;
+    }
+
+    .search input {
+      width: 100%;
+      background: transparent;
+      border: 0;
+      outline: none;
+      color: white;
+      font-size: 18px;
+    }
+
+    .search input::placeholder {
+      color: #777;
+    }
+
+    .filter {
+      width: 70px;
+      height: 70px;
+      border: 1px solid #444;
+      border-radius: 50%;
+      background: #111;
+      color: white;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* ================= ORDER BUTTON ================= */
+
+    .main-order {
+      margin: 0 36px 28px;
+      border: 1px solid #555;
+      border-radius: 20px;
+      padding: 17px 28px;
+      min-height: 128px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 0 10px rgba(255,255,255,.06);
+      cursor: pointer;
+    }
+
+    .order-icon {
+      width: 106px;
+      height: 106px;
+      border-radius: 50%;
+      border: 1px solid #555;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 45px;
+      margin-right: 30px;
+    }
+
+    .main-order h2 {
+      font-size: 25px;
+      margin-bottom: 8px;
+    }
+
+    .main-order p {
+      color: #bbb;
+      font-size: 18px;
+    }
+
+    .main-order .right-arrow {
+      margin-left: auto;
+      font-size: 40px;
+      color: #eee;
+    }
+
+    /* ================= SECTIONS ================= */
+
+    .section {
+      padding: 0 36px;
+      margin-bottom: 32px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 17px;
+    }
+
+    .section-header h2 {
+      font-size: 23px;
+    }
+
+    .view-all {
+      color: #aaa;
+      font-size: 15px;
+    }
+
+    .view-all span {
+      font-size: 20px;
+    }
+
+    /* ================= CATEGORIES ================= */
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+
+    .category {
+      height: 120px;
+      border-radius: 18px;
+      background: #171719;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    .category:hover {
+      background: #242427;
+      transform: translateY(-2px);
+    }
+
+    .category-icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+      filter: grayscale(1);
+    }
+
+    .category span {
+      font-size: 15px;
+      color: #ddd;
+    }
+
+    /* ================= RECENT ORDERS ================= */
+
+    .recent-orders {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .recent-order {
+      min-height: 110px;
+      border-radius: 18px;
+      background: #151618;
+      display: flex;
+      align-items: center;
+      padding: 13px 20px;
+      gap: 18px;
+    }
+
+    .restaurant-img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #252525;
+      flex-shrink: 0;
+    }
+
+    .order-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .order-info h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .order-info p {
+      color: #aaa;
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+
+    .order-info small {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .order-status {
+      text-align: right;
+      min-width: 110px;
+    }
+
+    .status {
+      display: inline-block;
+      padding: 6px 9px;
+      border-radius: 14px;
+      font-size: 12px;
+      margin-bottom: 13px;
+    }
+
+    .delivered {
+      color: #75d886;
+      border: 1px solid #3c7144;
+      background: rgba(45, 130, 55, .08);
+    }
+
+    .cancelled {
+      color: #e85b5b;
+      border: 1px solid #743b3b;
+      background: rgba(150, 40, 40, .08);
+    }
+
+    .price {
+      display: block;
+      font-size: 17px;
+      font-weight: bold;
+    }
+
+    .order-arrow {
+      font-size: 34px;
+      color: #eee;
+    }
+
+    /* ================= PROMO ================= */
+
+    .promo {
+      margin: 0 36px 35px;
+      min-height: 180px;
+      border: 1px solid #444;
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      background:
+        radial-gradient(
+          circle at 80% 50%,
+          rgba(80,80,80,.45),
+          transparent 35%
+        ),
+        linear-gradient(
+          115deg,
+          #0d0e10,
+          #202225,
+          #070809
+        );
+      display: flex;
+      align-items: center;
+      padding: 30px 40px;
+    }
+
+    .promo::after {
+      content: "";
+      position: absolute;
+      right: 55px;
+      bottom: 18px;
+      font-size: 80px;
+      filter: grayscale(1);
+    }
+
+    .promo-content {
+      max-width: 55%;
+      position: relative;
+      z-index: 2;
+    }
+
+    .promo h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .promo p {
+      color: #aaa;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .promo-icon {
+      width: 70px;
+      height: 70px;
+      border: 1px solid #444;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      margin-right: 25px;
+      flex-shrink: 0;
+    }
+
+    /* ================= BOTTOM NAV ================= */
+
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 760px;
+      height: 100px;
+      background: rgba(14,15,17,.97);
+      border-top: 1px solid #1e1f21;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      z-index: 100;
+      backdrop-filter: blur(15px);
+    }
+
+    .nav-item {
+      width: 33.33%;
+      text-align: center;
+      color: #aaa;
+      font-size: 15px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .nav-icon {
+      display: block;
+      font-size: 31px;
+      margin-bottom: 5px;
+      color: #bbb;
+    }
+
+    .nav-item.active {
+      color: white;
+    }
+
+    .nav-item.active .nav-icon {
+      color: white;
+    }
+
+    .nav-item.active::before {
+      content: "";
+      position: absolute;
+      width: 55px;
+      height: 3px;
+      background: white;
+      border-radius: 5px;
+      top: -24px;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 0 10px white;
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media (max-width: 600px) {
+
+      header {
+        padding: 25px 20px 10px;
+      }
+
+      .eclipse {
+        width: 82px;
+        height: 82px;
+      }
+
+      .logo-title {
+        font-size: 22px;
+        margin-top: 25px;
+      }
+
+      .logo-subtitle {
+        font-size: 11px;
+      }
+
+      .greeting {
+        padding: 25px 20px 10px;
+      }
+
+      .greeting-row {
+        display: block;
+      }
+
+      .greeting h1 {
+        font-size: 27px;
+      }
+
+      .location {
+        margin-top: 20px;
+        width: 100%;
+        min-width: 0;
+      }
+
+      .search-area {
+        padding: 10px 20px 25px;
+      }
+
+      .search {
+        height: 62px;
+        padding: 0 18px;
+      }
+
+      .search-icon {
+        font-size: 27px;
+      }
+
+      .filter {
+        width: 62px;
+        height: 62px;
+      }
+
+      .main-order {
+        margin: 0 20px 28px;
+        padding: 15px;
+      }
+
+      .order-icon {
+        width: 75px;
+        height: 75px;
+        font-size: 35px;
+        margin-right: 17px;
+      }
+
+      .main-order h2 {
+        font-size: 20px;
+      }
+
+      .main-order p {
+        font-size: 14px;
+      }
+
+      .main-order .right-arrow {
+        font-size: 28px;
+      }
+
+      .section {
+        padding: 0 20px;
+      }
+
+      .categories {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 8px;
+      }
+
+      .category {
+        height: 105px;
+        border-radius: 15px;
+      }
+
+      .category-icon {
+        font-size: 28px;
+      }
+
+      .category span {
+        font-size: 11px;
+      }
+
+      .recent-order {
+        padding: 12px;
+        gap: 10px;
+      }
+
+      .restaurant-img {
+        width: 58px;
+        height: 58px;
+      }
+
+      .order-info h3 {
+        font-size: 16px;
+      }
+
+      .order-info p,
+      .order-info small {
+        font-size: 12px;
+      }
+
+      .order-status {
+        min-width: 80px;
+      }
+
+      .status {
+        font-size: 10px;
+      }
+
+      .price {
+        font-size: 14px;
+      }
+
+      .order-arrow {
+        display: none;
+      }
+
+      .promo {
+        margin: 0 20px 30px;
+        padding: 25px 20px;
+      }
+
+      .promo-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 25px;
+        margin-right: 15px;
+      }
+
+      .promo-content {
+        max-width: 75%;
+      }
+
+      .promo h2 {
+        font-size: 17px;
+      }
+
+      .promo p {
+        font-size: 13px;
+      }
+
+      .promo::after {
+        right: -5px;
+        font-size: 60px;
+      }
+
+      .bottom-nav {
+        height: 85px;
+      }
+    }
